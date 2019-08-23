@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="jquery-3.3.1.min.js"></script>
+<body>
+<div><font>会员注册</font>USER REGISTER
+    <form class="form-horizontal" style="margin-top: 5px;">
+        <table>
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" id="username" name="username" placeholder="请输入用户名">
+                    <span id="usernameInfo" style="color:red"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" placeholder="请输入密码"></td>
+            </tr>
+        </table>
+        <input type="submit" value="注册"/></form>
+</div>
+</body>
+<script>
+    $(function () {
+        $("#username").blur(function () {
+            var username=$(this).val();
+            if(username.length>0){
+                var url="CheckUsernameServlet";
+                var data={username:username};
+                var callback=function (result) {
+                    if (result.errorMsg){
+                        alert(result.errorMsg);
+                    } else {
+                        if (result.flag){
+                            $("#usernameInfo").css("color","green");
+                        } else {
+                            $("#usernameInfo").css("color","red");
+                        }
+                        $("#usernameInfo").html(result.msg);
+                    }
+                };
+                var type="json";
+                $.post(url,data,callback,type);
+            }else {
+                $("#usernameInfo").html("请输入用户名");
+            }
+        });
+    })
+</script>
+</html>

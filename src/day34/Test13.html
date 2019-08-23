@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="user"><span id="info" style="color:red"></span>
+<script>
+    document.getElementById("user").onfocus=function (ev) {
+        document.getElementById("info").innerText="用户名不能为空";
+    }
+    document.getElementById("user").onblur=function (ev) {
+        document.getElementById("info").innerHTML="";
+    }
+</script>
+</body>
+</html>

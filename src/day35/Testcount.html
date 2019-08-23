@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span id="time">5</span>秒后回到主页
+<script>
+    var count=4;
+    window.setInterval(function () {
+        document.getElementById("time").innerHTML=count;
+        if (count==0){
+            location.href="http://localhost:63342/untitled2/day35/TestBom.html";
+        }
+        count--;
+    },1000);
+</script>
+</body>
+</html>

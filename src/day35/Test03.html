@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    a:link{
+        text-decoration:none;
+    }
+    a:hover{
+        color:red;
+    }
+
+    #info {
+        display:none;
+        border:1px dashed black;
+        width:200px;
+        height:30px;
+        text-align:center;
+        line-height: 30px;
+        border-radius:5px;
+        background-color:yellow;
+    }
+</style>
+<script>
+    window.onload=function () {
+        document.getElementById("cz").onmouseover=function () {
+            document.getElementById("info").style.display="block";
+        }
+        document.getElementById("cz").onmouseout=function () {
+            document.getElementById("info").style.display="none";
+        }
+    }
+</script>
+<body>
+<a href="http://www.baidu.com" id="cz">点我有惊喜哦！</a>
+<div id="info">您将要访问百度首页</div>
+</body>
+</html>

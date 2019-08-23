@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    $.extend({
+        min:function (a,b) {
+            return a<b?a:b;
+        },
+        max:function (a,b) {
+            return a>b?a:b;
+        }
+    });
+
+    var min=$.min(1,2);
+    alert("1和2的最小值为："+min);
+    var max=$.max(2,3);
+    alert("2和3的最大值为："+max);
+</script>
+</html>

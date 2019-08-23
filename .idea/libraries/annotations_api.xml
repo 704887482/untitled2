@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="annotations-api">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/annotations-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/catalina-ant.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/catalina-ha.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/catalina-storeconfig.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/catalina-tribes.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/catalina.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/commons-beanutils-1.9.3.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/commons-collections-3.2.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/druid-1.0.9.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/ecj-4.12.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/el-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jackson-annotations-2.2.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jackson-core-2.2.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jackson-core-asl-1.8.8.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jackson-databind-2.2.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jackson-mapper-asl-1.8.8.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jackson-module-jaxb-annotations-2.2.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jasper-el.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jasper.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jaspic-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/jsp-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/mysql-connector-java-5.1.22-bin.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/servlet-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/spring-beans-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/spring-core-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/spring-jdbc-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/spring-tx-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-coyote.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-dbcp.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-jdbc.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-jni.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-util-scan.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-util.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/tomcat-websocket.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/apache-tomcat-9.0.22/lib/websocket-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

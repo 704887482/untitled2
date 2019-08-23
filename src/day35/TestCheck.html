@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var reg=new RegExp("^\\d{3}$");
+    document.write(reg.test("123"));
+    document.write("<br>"+reg.test("abc"));
+    var reg2=/^\d{3}$/;
+    var reg3=/abc/i;
+    document.write(reg3.test("abc")+"<br>");
+    document.write(reg3.test("Abc")+"<br>");
+    function checkAll() {
+        return false;
+    }
+</script>
+<h1>用户注册</h1>
+<form action="/LoginServlet" method="get" onsubmit="return checkAll()">
+    用户名：
+    <input type="text" name="user"><br>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>

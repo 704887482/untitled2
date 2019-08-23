@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<ul id="citys">
+    <li>南昌</li>
+    <li>九江</li>
+    <li>赣州</li>
+    <li>上饶</li>
+    <li>景德镇</li>
+</ul>
+</body>
+<script>
+    var list=$("#citys");
+    for (var i=0;i<list.length;i++){
+        var lijq=$(list[i]);
+        alert(lijq.text());
+    }
+    var lis=$("#citys li");
+    lis.each(function (index,element) {
+        alert($(element).text()+","+index);
+    })
+    var lls=$("#citys li");
+    for (var li of lls){
+        var lijq=$(li);
+        alert(lijq.text());
+    }
+</script>
+</html>

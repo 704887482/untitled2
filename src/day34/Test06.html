@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sum(a,b){
+        document.write("arguments长度:"+arguments.length+"<hr>");
+        for (var i=0;i<arguments.length;i++){
+            document.write(i+"->"+arguments[i]+"<br>");
+        }
+        document.write("a="+a+"<br>");
+        document.write("b="+b+"<br>");
+    }
+    sum(3,4,5);
+</script>
+</body>
+</html>

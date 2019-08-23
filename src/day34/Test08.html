@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="2.jpg" id="pic" width="600">
+<script>
+window.setInterval("changePic()",1000);
+var num=0;
+function changePic(){
+    var pic=document.getElementById("pic");
+    pic.src=num+".jpg";
+    num++;
+    if(num==3){
+        num=0;
+    }
+}
+</script>
+</body>
+</html>

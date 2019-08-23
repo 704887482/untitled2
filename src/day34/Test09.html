@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="按钮1" id="b1" onclick="clickMe()">
+<input  type="button" value="按钮2" id="b2">
+<script>
+    function clickMe(){
+        alert("我是按钮1");
+    }
+
+    document.getElementById("b2").onclick=function(){
+        alert("我是按钮2");
+    }
+</script>
+</body>
+</html>

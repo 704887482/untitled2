@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML和innerText</title>
+</head>
+<body>
+<div id="myDiv">
+    <span>
+        <a href="#">我是链接</a>
+    </span>
+</div>
+<hr>
+<input type="button" id="b1" value="得到HTML">
+<input type="button" id="b2" value="设置HTML">
+<input type="button" id="b3" value="得到Text">
+<input type="button" id="b4" value="设置Text">
+<script>
+    document.getElementById("b1").onclick=function () {
+        alert(document.getElementById("myDiv").innerHTML);
+    }
+    document.getElementById("b2").onclick=function () {
+        document.getElementById("myDiv").innerHTML="<h2 style='color:red'>我是标题</h2>";
+    }
+    document.getElementById("b3").onclick=function () {
+        alert(document.getElementById("myDiv").innerText);
+    }
+    document.getElementById("b4").onclick=function () {
+        document.getElementById("myDiv").innerText="<h2 style'color:red'>我是标题</h2>";
+    }
+</script>
+</body>
+</html>

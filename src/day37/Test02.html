@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <style>
+        #canvas {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(255, 231, 147);
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="向上滑动" id="hide">
+<input type="button" value="向下滑动" id="show">
+<input type="button" value="切换滑动" id="toggle">
+<hr>
+<div id="canvas"></div>
+</body>
+<script>
+    $("#hide").click(function () {
+        $("#canvas").slideUp(500,function () {
+            alert("向上滑动完毕！");
+        });
+    });
+
+    $("#show").click(function () {
+        $("#canvas").slideDown(500,function () {
+            alert("向下滑动完毕！");
+        });
+    });
+
+    $("#toggle").click(function () {
+        $("#canvas").slideToggle(500,function () {
+            alert("滑动完毕！");
+        });
+    });
+</script>
+</html>

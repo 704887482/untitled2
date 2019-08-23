@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="clock"></h1>
+<hr>
+<input type="button" value="开始" onclick="begin()" id="begin">
+<input type="button" value="暂停" onclick="pause()" id="pause" disabled="disabled">
+<script>
+    var timer=0;
+    function begin(){
+        timer=window.setInterval("start()",1000);
+        document.getElementById("begin").disabled=true;
+        document.getElementById("pause").disabled=false;
+    }
+    function start() {
+        document.getElementById("clock").innerHTML=new Date().toLocaleString();
+    }
+    function pause() {
+        window.clearInterval(timer);
+        document.getElementById("begin").disabled=false;
+        document.getElementById("pause").disabled=true;
+    }
+</script>
+</body>
+</html>

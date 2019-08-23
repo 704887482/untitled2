@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    th {
+        background-color: rgb(255, 231, 147);
+    }
+
+    tr:hover {
+        background-color: yellow;
+    }
+</style>
+<body>
+<table border="1" cellspacing="0" algin="center" width="500" id="info">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+    <hr>
+    <div style="text-align:center ">
+        学号：<input type="text" placeholder="请输入您的学号" id="number">
+        姓名：<input type="text" placeholder="请输入您的姓名" id="name">
+        <input type="button" value="添加" onclick="add()">
+    </div>
+</table>
+</body>
+<script>
+    var infoObj = document.getElementById("info");
+    var numberObj = document.getElementById("number");
+    var nameObj = document.getElementById("name");
+
+    function add() {
+        var number = numberObj.value;
+        var name = nameObj.value;
+        var tr = document.createElement("tr");
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        td1.innerHTML = number;
+        td2.innerHTML = name;
+        td3.innerHTML = "<a href='#'onclick='remove(this)'>删除</a>"; /*把td挂载到tr树上面*/
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3); /*把tr添加到table树*/
+        infoObj.appendChild(tr);
+    }/*根据点击的a标签找到对应的父标签(td)再找到对应的父标签(tr)*/
+    function remove(_this) {
+        _this.parentNode.parentNode.remove();
+    }
+</script>
+</html>

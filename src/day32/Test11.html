@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .door {
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+        border: 1px solid gray;
+        perspective: 1000px;
+        /*background: url('images/dog.gif') no-repeat cover;*/
+        position: relative;
+    }
+
+    .door > div {
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .left {
+        float: left;
+        width: 50%;
+        height: 100%;
+        background-color: brown;
+        transform-origin: left center;
+        transition: 1s;
+        position: relative;
+    }
+
+    .left::before {
+        content: '👈';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-10px);
+        border: 1px solid whitesmoke;
+    }
+
+    .right {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-color: brown;
+        transform-origin: right center;
+        transition: 1s;
+        position: relative;
+    }
+
+    .right::before {
+        content: '👉';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-10px);
+        border: 1px solid whitesmoke;
+    }
+
+    .door:hover .left {
+        transform: rotateY(-130deg);
+    }
+
+    .door:hover .right {
+        transform: rotateY(130deg);
+    }
+</style>
+<body>
+<div class="door">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+</body>
+</html>

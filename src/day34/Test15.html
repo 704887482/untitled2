@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="city">
+    <option value="广州">广州</option>
+    <option value="深圳">深圳</option>
+    <option value="珠海">珠海</option>
+</select>
+<hr>
+英语：<input type="text" id="user">
+<hr>
+<h2 id="key"></h2>
+<script>
+
+    document.getElementById("city").onchange=function () {
+        alert(this.value);
+    }
+
+    document.getElementById("user").onkeyup=function (ev) {
+        this.value=this.value.toUpperCase();
+    }
+
+    document.getElementById("user").onkeydown=function (ev) {
+        document.getElementById("key").innerHTML=ev.keyCode;
+    }
+
+</script>
+</body>
+</html>

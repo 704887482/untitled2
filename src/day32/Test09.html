@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    div{
+        background-color:rgb(237,236,250);
+        boder:1px dashed #ccc;
+        box-sizing:border-box;
+    }
+    .top{
+        height: 50px;
+    }
+    .banner{
+        margin:10px auto;
+        width: 960px;
+        height: 150px;
+    }
+    .celarFix:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .line-1{
+        margin:10px auto;
+        width: 960px;
+        background-color:transparent;
+        border: 0;
+    }
+    .line-1>div{
+        width: 232px;
+        height: 100px;
+        margin-left: 10px;
+        float:left;
+    }
+    .nomargin{
+        margin-left: 0!important;
+    }
+    .line-2{
+        margin:0 auto;
+        width: 960px;
+        background-color:transparent;
+        border:0;
+    }
+    .line-2>div{
+        width: 232px;
+        height: 300px;
+        margin-left: 10px;
+        float:left;
+    }
+    .footer{
+        margin-top: 10px;
+        height: 180px;
+    }
+</style>
+<body>
+<div class="top"></div>
+<div class="banner"></div>
+<div class="line-1 clearFix">
+    <div class="nomargin"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="line-2 celarFix">
+    <div class="nomargin"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

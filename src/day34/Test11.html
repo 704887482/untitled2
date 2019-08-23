@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+用户名：<input type="text" id="t1"><br>
+用户名：<input type="text" id="t2"><br>
+<hr>
+<input type="button" value="单击复制/双击清除" id="b1">
+<script>
+    document.getElementById("b1").onclick=function (ev) {
+        document.getElementById("t2").value=document.getElementById("t1").value;
+    }
+    document.getElementById("b1").ondblclick=function (ev) {
+        document.getElementById("t1").value="";
+        document.getElementById("t2").value="";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" placeholder="请输入标签" id="txt">
+<input type="button" id="btnHTML" value="创建HTML">
+<input type="button"id="btnText" value="创建Text">
+<hr>
+<div id="myDiv">
+    <!--<a href="https://www.baidu.com">百度</a>-->
+</div>
+</body>
+<script>
+    $(function () {
+        $("#btnHTML").click(function () {
+            $("#myDiv").html($("#txt").val());
+        });
+        $("#btnText").click(function () {
+            $("#myDiv").text($("#txt").val());
+        });
+    })
+</script>
+</html>

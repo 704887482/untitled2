@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>根据标签的属性找元素</title></head>
+<body><input type="button" value="(通过标签名)给a链接添加地址" id="b2"/> <input type="button" value="(通过name属性)给div设值" id="b3"/>
+<input type="button" value="(通过类名)给div设值" id="b4"/>
+<hr/>
+<a>京东</a><br/> <a>京东</a><br/> <a>京东</a><br/>
+<hr/>
+<div name="one"></div>
+<div name="one"></div>
+<div name="one"></div>
+<hr/>
+<div class="two"></div>
+<div class="two"></div>
+<div class="two"></div>
+<script>
+    document.getElementById("b2").onclick=function () {
+        var arr=document.getElementsByTagName("a");
+        for (var i=0;i<arr.length;i++){
+            arr[i].href="http://www.jd.com";
+        }
+    }
+    document.getElementById("b3").onclick=function () {
+        var arr=document.getElementsByName("one");
+        for (var obj of arr){
+            obj.innerHTML="<a href='http://www.baidu.com'>百度</a>";
+        }
+    }
+    document.getElementById("b4").onclick=function () {
+        var arr=document.getElementsByClassName("two");
+        for (var i=0;i<arr.length;i++){
+            arr[i].innerHTML="<a href='http://www.baidu.com'>百度</a>";
+        }
+    }
+</script>
+</body>

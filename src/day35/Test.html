@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>验证注册页面</title>
+    <script src="js/public.js"></script>
+    <style type="text/css"> span { /*出错信息为红色*/
+        color: red;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .main {
+        width: 525px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .left {
+        text-align: right;
+        width: 80px;
+        height: 25px;
+        padding-right: 5px;
+    }
+
+    .center {
+        width: 280px;
+    }
+
+    .in {
+        width: 130px;
+        height: 16px;
+        border: solid 1px #79abea;
+    }
+
+    div {
+        color: #F00;
+    }
+    </style>
+    <script>
+        function checkAll() {
+            return checkUser() &amp;&amp; checkPassword() &amp;&amp; checkEmail() &amp;&amp; checkMobile() &amp;&amp; checkBirthday();
+        }
+
+        function checkUser() {
+            var reg = /^[a-zA-Z]\w{3,15}$/;
+            if (reg.test(getEle("user").value)) {
+                getEle("userInfo").innerHTML = "";
+                return true;
+            } else {
+                getEle("userInfo").innerHTML = "error";
+                return false;
+            }
+        }
+
+        function checkPassword() {
+            var reg = /^\w{6,20}$/;
+            if (reg.test(getEle("pwd").value)) {
+                getEle("pasInfo").innerHTML = "";
+                return true;
+            } else {
+                getEle("pasInfo").innerHTML = "error";
+                return false;
+            }
+        }
+
+        function checkEmail() {
+            var reg = /^\w+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if (reg.test(getEle("email").value)) {
+                getEle("emailInfo").innerHTML = "";
+                return true;
+            } else {
+                getEle("emailInfo").innerHTML = "error";
+                return false;
+            }
+        }
+
+        function checkMobile() {
+            var reg = /^1[3|5|7|8]\d{9}$/;
+            if (reg.test(getEle("mobile").value)) {
+                getEle("mobileInfo").innerHTML = "";
+                return true;
+            } else {
+                getEle("mobileInfo").innerHTML = "error";
+                return false;
+            }
+        }
+
+        function checkBirthday() {
+            var reg = /^(19[0-9][0-9]|200[0-9])-([1-9]|0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]| [1-9])$/;
+            if (reg.test(getEle("birth").value)) {
+                getEle("birthdayInfo").innerHTML = "";
+                return true;
+            } else {
+                getEle("birthdayInfo").innerHTML = "error";
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="server" method="post" id="myform" onsubmit="return checkAll()">
+    <table class="main" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td><h3>新用户注册</h3></td>
+        </tr>
+        <tr>
+            <td style="height:10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr><!-- 不能为空， 输入长度必须介于 5 和 10 之间 -->
+                        <td class="left">用户名：</td>
+                        <td class="center"> <!--失去焦点就调用--> <input id="user" name="user" type="text" class="in"
+                                                                  onblur="checkUser()"/> <span id="userInfo"></span>
+                        </td>
+                    </tr>
+                    <tr><!-- 不能为空， 输入长度大于6个字符 -->
+                        <td class="left">密码：</td>
+                        <td class="center"><input id="pwd" name="pwd" type="password" class="in"
+                                                  onblur="checkPassword()"/> <span id="pasInfo"></span></td>
+                    </tr>
+                    <tr><!-- 不能为空， 与密码相同 -->
+                        <td class="left">确认密码：</td>
+                        <td class="center"><input id="repwd" name="repwd" type="password" class="in"/></td>
+                    </tr>
+                    <tr><!-- 不能为空， 邮箱格式要正确 -->
+                        <td class="left">电子邮箱：</td>
+                        <td class="center"><input id="email" name="email" type="text" class="in" onblur="checkEmail()"/>
+                            <span id="emailInfo"></span></td>
+                    </tr>
+                    <tr><!-- 不能为空， 使用正则表达式自定义校验规则,1开头，11位全是数字 -->
+                        <td class="left">手机号码：</td>
+                        <td class="center"><input id="mobile" name="mobile" type="text" class="in"
+                                                  onblur="checkMobile()"/> <span id="mobileInfo"></span></td>
+                    </tr>
+                    <tr><!-- 不能为空， 要正确的日期格式 -->
+                        <td class="left">生日：</td>
+                        <td class="center"><input id="birth" name="birth" type="text" class="in"
+                                                  onblur="checkBirthday()"/> <span id="birthdayInfo"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="left">&nbsp;</td>
+                        <td class="center"><input name="" type="submit" style="width: 100px;height: 30px;"/></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+</body> </html>
